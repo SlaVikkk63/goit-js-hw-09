@@ -8,7 +8,7 @@ createBtn.addEventListener('click', evt => {
   evt.preventDefault();
   for (let i = 0; i < Number(amountField.value); i += 1) {
     const delays = Number(delayField.value) + stepField.value * i;
-    createPromise(i, delays)
+    createPromise(i+1, delays)
       .then(({ position, delay }) => {
         console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
       })
